@@ -1,0 +1,3 @@
+What happens when you initialize a repository? Why do you need to do it?
+To initialize a repository, we use the command git init. 
+When we do this, a hidden folder titled .git gets created inside the directory. This folder will store the metadata of the repository's state at all times. We need to do it simply to make the repository a git repository where we can practice version control.

@@ -1,0 +1,1 @@
+This course has this great way of making concepts stay in your mind by asking you to answer some questions and compile them into a file that you can refer to as and when needed. This is a collection of my answers.

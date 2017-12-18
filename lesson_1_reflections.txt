@@ -19,3 +19,13 @@ As we saw now, git checkout will allow us to go to a previously working version 
 
 Now that you have your workspace set up, what do you want to try using Git for?
 I want to use Git to keep track of the changes I make in my code and take bolder steps towards changes in the code!
+
+
+/*
+Commands learnt:
+
+git log - shows all recent commits (use argument --stat for compact version) 
+git diff - shows difference between two things based on <no argument -->  working directory, staging area; --staged --> staging area, latest commit; two commit ID --> between commits>
+git checkout - takes the files to a particular commit state/changes branch
+git clone - creates a clone of an existing git repository and also copies its entire history of changes
+*/

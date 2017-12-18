@@ -1,3 +1,6 @@
 What happens when you initialize a repository? Why do you need to do it?
 To initialize a repository, we use the command git init. 
 When we do this, a hidden folder titled .git gets created inside the directory. This folder will store the metadata of the repository's state at all times. We need to do it simply to make the repository a git repository where we can practice version control.
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+The repository is the metadata that is stored by git, and the working directory is the directory we are working with currently. The staging area is where all the files that are to be committed are stored. It is a sort of a staircase, if you may, through which the changes make their way to the repository. Through the presence of the staging area, we have micro-control over the files that we want to be committed with every commit. It is not necessary to commit all the files everytime. Instead, we can be selective.

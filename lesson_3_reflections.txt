@@ -8,4 +8,5 @@ git remote - shows all the remotesset for a particular git repository
 git remote add <remote_name> <url> - creates a new remote with the given remote name and as the passed url
 git push <remote_name> <branch_name> - Pushes changes made in the given branch of the repository to the remote specified
 git remote -v - shows the urls set as the remote (both fetch - from which pull requests will be made; push - to which changes will be sent)
+git pull <remote_name> <branch_name> - pulls changes in the GitHub repo from the remote url to and integrates them to the local repo in the specified branch
 */

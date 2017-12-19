@@ -4,3 +4,32 @@ When we do this, a hidden folder titled .git gets created inside the directory. 
 
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 The repository is the metadata that is stored by git, and the working directory is the directory we are working with currently. The staging area is where all the files that are to be committed are stored. It is a sort of a staircase, if you may, through which the changes make their way to the repository. Through the presence of the staging area, we have micro-control over the files that we want to be committed with every commit. It is not necessary to commit all the files everytime. Instead, we can be selective.
+
+How can you use the staging area to make sure you have one commit per logical change?
+The staging area allows us to specify which files we want to commit the next time we go about doing it. So, through the staging area, we can create a clear demarcation between the files that need to be committed and those that do not. We simply do not stage the files that are too small to be committed just yet. 
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+Branches give us more opportunities to experiment with our work as developers. We can have one solid, working version of our code that can be distributed to consumers, and an under-development version where wetest out new features that are still to be added to the working version. Changes in one branch do not affect another branch and as such, we will have the complete freedom to go berzerk with our code.
+
+How do the diagrams help you visualize the branch structure?
+Diagrams bring out how each commit is related to the other commits. They essentially bring out the heirachy of commits, and therefore, help us understand how the changes have progressed over time. Moreover, using diagrams, we can effectively understand what detaching the head will do to our project. 
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+Merging two branches together gives us a branch which has all the changes individually made in the branches in it. It has the commit history of both the branches, and its label is the same as the first argument in the git merge command (can be changed, probably?). Representing it with a diagram makes the hierachy clear.
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+Pros: We don't have to manually track the changes. Git does that for us by looking at the original file and comparing it with the files in the two branches. 
+Cons: There can be conflicts due to ambiguity in the changed files when compared to the original.
+
+/*
+Commands learnt:
+git init - initializes a git repository in the working director
+git add - adds an untracked file to the staging area
+git commit - commits the files in the staging area to the repository
+git status - shows the status of the repository (pending additions, pending commits, etc.)
+git branch - lists all branches in the repo when no arguments; argument creates a new branch with all the files in the original branch with the name same as argument branch
+git checkout -b <branch_name> - It creates a new branch at a commit which is unreachable. Doing so ensures that we do not lose that commit if we checkout someth other branch 
+git merge - merges two branches; git decides automatically what and how to merge
+git show <commit_ID> - shows the changes made in a commit wrt to parent; used when parent unknown
+git brand -c <branch_name> - deletes the branch with the given branch name; only deletes label not commits
+*/

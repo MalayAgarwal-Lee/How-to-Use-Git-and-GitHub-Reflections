@@ -1,6 +1,27 @@
 When would you want to use a remote repository rather than keeping all your work local?
 It would make sense to use a remote repository when there are multiple people working on a project on different computers. Using a remote repository will make collaboration easier and faster.
 
+Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+In a remote repository, we might not be the only contributors. As such, there may not be changes that we want to be incorporated into our local repository just yet. We might feel that the work needs reviewing, or is all together wrong (get a good team!), and hence cannot be part of our local repository. Working manually gives us more control.
+
+Describe the differences between forks, clones, and branches. When would you use one instead of another?
+Branches - They are simply extensions of the repository in the same repository. 
+Clones - They are replicas of remote repositories on the local computer
+Forks - These are repositories which exist only on GitHub serves, and are obtained from pre-existing repositories on the site.
+We use branches when we want to keep a working version of our code, and a new change in it separate so that we do not lose functionality in the working version.
+We use clones when we wish to contribute to a remote repository, and actively make changes in it.
+We use forks when we wish to spin-off an existing GitHub repository into something new. Changes we make here are added to our forked repo and not on the original repo. Gives the original author credit. 
+
+What is the benefit of having a copy of the last known state of the remote stored locally?
+This way, if there are any changes made in the remote repo, and not in the local one, git can easily identify it and track it down, thereby making the process of git fetch possible. 
+
+How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+Without using Git and GitHub, we'll simply have to maintain separate copies of our work on each of our computers and make changes there. creating new folders whenever we need to add new versions and constantly sharing those changes with the other collaborators. 
+Easier would be that we wouldn't have to work with so many commands and undertstand what each of them does. It's simply editing, copying and pasting. 
+Harder would be the task of merging the various versions together, and recognizing errors easily.
+
+When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+It would make sense to make changes in a separate branch when there is a system of reviewing set-up between the team. Though more complicated, it makes the person making the changes more accountable. Also, in a way, it gives the person making the changes a TONNE of freedom. They can go absolutely bonkers with the code as none of their changes will actually affect the working version as all the changes are on a separate branch. The team won't be harmed as the person is less likely to break something. Dealing directly makes sense when there is a single person working and there are no side-projects such as translation involved. The benefits to this second approach is that it is less complicated and gives control to one person.
 
 /*
 Commands learnt:
@@ -9,4 +30,12 @@ git remote add <remote_name> <url> - creates a new remote with the given remote 
 git push <remote_name> <branch_name> - Pushes changes made in the given branch of the repository to the remote specified
 git remote -v - shows the urls set as the remote (both fetch - from which pull requests will be made; push - to which changes will be sent)
 git pull <remote_name> <branch_name> - pulls changes in the GitHub repo from the remote url to and integrates them to the local repo in the specified branch
+git fetch - fetches the current position of origin/master on the remote repo and creates a new branch in the local repo with the changes made on that remote branch. The master branch already present in the local repo remains intact.
+*/
+
+/*
+Special notes:
+git pull <remote_name> <branch_name> same as running:
+git fetch origin
+git merge master origin/master
 */
